@@ -133,6 +133,7 @@
     <script src="assets/js/smooth-scroll.js"></script>
     <!-- custom js  -->
     <script src="main.js"></script>
+    
 
 </body>
 

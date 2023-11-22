@@ -1,5 +1,6 @@
 <?php
 include 'conexion_login.php';
+include 'login.html';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
@@ -14,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nombre', '$apellido_1', '$apellido_2', '$email', '$hashed_password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registro exitoso";
+        echo "Registro exitoso"; 
+
     } else {
         echo "Error al registrar usuario: " . $conn->error;
     }
