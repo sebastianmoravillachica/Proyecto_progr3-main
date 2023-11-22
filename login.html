@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/stylelogin.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
 
     <title>Página de Inicio de Sesión de Saucy Burgers</title>
 </head>
@@ -29,7 +28,7 @@
                 <input type="text" placeholder="Segundo Apellido" name="apellido_2">
                 <input type="email" placeholder="Correo Electrónico" name="email">
                 <input type="password" placeholder="Contraseña" name="passwd">
-                <button onclick="mostrarMensaje()">Registrarse</button>
+                <button>Registrarse</button>
             </form>
         </div>
         <div class="form-container sign-in">
@@ -45,7 +44,7 @@
                 <input type="email" placeholder="Correo Electrónico" name="email">
                 <input type="password" placeholder="Contraseña" name="passwd">
                 <a href="#">¿Olvidaste tu Contraseña?</a>
-                <button>Iniciar Sesión</button>
+                <button >Iniciar Sesión</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -65,32 +64,6 @@
     </div>
 
     <script src="assets/js/script_login.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-        function mostrarMensaje() {
-            // Puedes personalizar el mensaje según tus necesidades
-            Swal.fire({
-                icon: 'success',
-                title: 'Registro Exitoso',
-                text: 'Tu cuenta ha sido registrada exitosamente.',
-                showConfirmButton: true, // Mostrar botón de confirmación
-                allowOutsideClick: false, // Evitar que se cierre al hacer clic fuera del mensaje
-                allowEscapeKey: false, // Evitar que se cierre al presionar la tecla ESC
-                allowEnterKey: true, // Permitir cerrar el mensaje con la tecla Enter
-                showCloseButton: false, // Ocultar el botón "Cerrar"
-                showCancelButton: false, // Ocultar el botón "Cancelar"
-                timer: 0 // Desactivar el temporizador de cierre automático
-            });
-        }
-    </script>
-    
-    
-    
-    
-    
-
 </body>
 
 </html>
