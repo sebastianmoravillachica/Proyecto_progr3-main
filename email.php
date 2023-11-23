@@ -25,8 +25,10 @@
         .contact-section {
             position: relative;
             z-index: 3;
-            padding-top: 100px; /* Aumentado para mover la sección más abajo */
-            padding-bottom: 100px; /* Aumentado para mover la sección más abajo */
+            padding-top: 100px;
+            /* Aumentado para mover la sección más abajo */
+            padding-bottom: 100px;
+            /* Aumentado para mover la sección más abajo */
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,7 +76,7 @@
 
                         <div class="contact-info-content">
                             <h4>Dirección</h4>
-                            <p>Multiplaza Escazú, C. <br/>  San José, San Rafael </p>
+                            <p>Multiplaza Escazú, C. <br /> San José, San Rafael </p>
                         </div>
                     </div>
 
@@ -96,34 +98,35 @@
 
                         <div class="contact-info-content">
                             <h4>Correo Electrónico</h4>
-                            <p>saucyburguers@ar-holdings.com</p>
+                            <p>saucyburguer@gmail.com</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-form">
-                    <form action="" id="contact-form">
+                    <form action="enviar_correo.php" method="post">
                         <h2>Envía un Mensaje</h2>
                         <div class="input-box">
-                            <input type="text" required="true" name="">
+                            <input type="text" required="true" name="nombre">
                             <span>Nombre Completo</span>
                         </div>
 
                         <div class="input-box">
-                            <input type="email" required="true" name="">
+                            <input type="email" required="true" name="correo">
                             <span>Correo Electrónico</span>
                         </div>
 
                         <div class="input-box">
-                            <textarea required="true" name=""></textarea>
+                            <textarea required="true" name="mensaje"></textarea>
                             <span>Escribe tu Mensaje...</span>
                         </div>
 
                         <div class="input-box">
-                            <input type="submit" value="Enviar" name="">
+                            <input type="submit" value="Enviar">
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
