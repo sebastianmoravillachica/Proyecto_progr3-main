@@ -9,19 +9,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $contrasena = isset($_POST['passwd']) ? $_POST['passwd'] : '';
 
-    $hashed_password = password_hash($contrasena, PASSWORD_DEFAULT);
+    // Establecer el rol por defecto (tipo 2 para clientes)
+    $id_cargo = 2;
 
-    $sql = "INSERT INTO tusuarios (nombre, apellido_1, apellido_2, email, passwd)
-            VALUES ('$nombre', '$apellido_1', '$apellido_2', '$email', '$hashed_password')";
+    // Verificar si todos los campos requeridos están completos
+    if (!empty($nombre) && !empty($apellido_1) && !empty($apellido_2) && !empty($email) && !empty($contrasena)) {
+        $sql = "INSERT INTO tusuarios (nombre, apellido_1, apellido_2, email, passwd, id_cargo)
+                VALUES ('$nombre', '$apellido_1', '$apellido_2', '$email', '$contrasena', '$id_cargo')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Registro exitoso"; 
-
+        if ($conn->query($sql) === TRUE) {
+            echo "Registro exitoso"; 
+        } else {
+            if ($conn->errno == 1062) { // Verificar el error específico para correo duplicado
+                echo "El correo que ingresaste ya existe";
+            } else {
+                echo "Error al registrar usuario: " . $conn->error;
+            }
+        }
     } else {
-        echo "Error al registrar usuario: " . $conn->error;
+        echo "Por favor, complete todos los campos obligatorios.";
     }
 }
-
 
 $conn->close();
 ?>

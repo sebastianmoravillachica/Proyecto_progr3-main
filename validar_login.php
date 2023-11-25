@@ -14,16 +14,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($resultado && $resultado->num_rows > 0) {
         // Obtener la fila del usuario
         $fila = $resultado->fetch_assoc();
-        $passwd_hash = $fila['passwd'];
+        $passwd_db = $fila['passwd']; // Contraseña almacenada en la base de datos
+        $id_cargo = $fila['id_cargo']; // Obtener el id_cargo del usuario
 
-        // Verificar la contraseña
-        if (password_verify($passwd, $passwd_hash)) {
+        // Verificar la contraseña sin hashear
+        if ($passwd === $passwd_db) {
             // Contraseña válida, iniciar sesión
             session_start();
             $_SESSION['email'] = $email;
 
-            // Redirigir al usuario a la página principal después del inicio de sesión exitoso
-            header('Location: index.html');
+            // Mostrar un mensaje de bienvenida según el id_cargo del usuario
+            if ($id_cargo == 1) { // Si el id_cargo es 1 (administrador)
+                echo "Bienvenido Administrador";
+            } else if ($id_cargo == 2) { // Si el id_cargo es 2 (cliente)
+                echo "Bienvenido Cliente";
+            }
+
+            // Redirigir al usuario a la página correspondiente después del inicio de sesión
+            if ($id_cargo == 1) {
+                // Redirigir al usuario administrador a la parte específica de la página web para administradores
+                header('Location: index.html');
+            } else if ($id_cargo == 2) {
+                // Redirigir al usuario cliente a la página principal después del inicio de sesión exitoso
+                header('Location: index.html');
+            }
+
             exit(); // Asegurar que se detenga la ejecución del script después de la redirección
         } else {
             // Contraseña incorrecta
