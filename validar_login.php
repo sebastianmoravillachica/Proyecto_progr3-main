@@ -1,6 +1,7 @@
 <?php
 // Conexión a la base de datos
 require "conexion_login.php";
+include 'login.html';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener el email y la contraseña ingresados por el usuario
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Redirigir al usuario a la página correspondiente después del inicio de sesión
             if ($id_cargo == 1) {
                 // Redirigir al usuario administrador a la parte específica de la página web para administradores
-                header('Location: index.html');
+                header('Location: dashboard.html');
             } else if ($id_cargo == 2) {
                 // Redirigir al usuario cliente a la página principal después del inicio de sesión exitoso
                 header('Location: index.html');
