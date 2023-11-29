@@ -98,35 +98,30 @@
 
                         <div class="contact-info-content">
                             <h4>Correo Electrónico</h4>
-                            <p>saucyburguer@gmail.com</p>
+                            <p>saucyburguers@gmail.com</p>
                         </div>
                     </div>
                 </div>
+                <form action="https://formsubmit.co/saucyburguers@gmail.com" method="POST">
+                    <h2>Envía un Mensaje</h2>
+                    <div class="input-box">
+                        <input type="text" required="true" name="nombre">
+                        <span>Nombre Completo</span>
+                    </div>
 
-                <div class="contact-form">
-                    <form action="enviar_correo.php" method="post">
-                        <h2>Envía un Mensaje</h2>
-                        <div class="input-box">
-                            <input type="text" required="true" name="nombre">
-                            <span>Nombre Completo</span>
-                        </div>
+                    <div class="input-box">
+                        <input type="email" required="true" name="correo">
+                        <span>Correo Electrónico</span>
+                    </div>
 
-                        <div class="input-box">
-                            <input type="email" required="true" name="correo">
-                            <span>Correo Electrónico</span>
-                        </div>
-
-                        <div class="input-box">
-                            <textarea required="true" name="mensaje"></textarea>
-                            <span>Escribe tu Mensaje...</span>
-                        </div>
-
-                        <div class="input-box">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </form>
-                </div>
-
+                    <div class="input-box">
+                        <textarea required="true" name="mensaje"></textarea>
+                        <span>Escribe tu Mensaje...</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
             </div>
         </div>
     </section>
