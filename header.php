@@ -59,7 +59,7 @@
                             <a href="javascript:void(0)" class="header-btn header-cart">
                                 <i class="uil uil-shopping-bag"></i>
                             </a>
-                            <a href="javascript:void(0)" class="header-btn">
+                            <a href="perfil.php" class="header-btn">
                                 <i class="uil uil-user-md"></i>
                             </a>
                         </div>

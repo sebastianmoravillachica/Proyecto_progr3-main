@@ -12,7 +12,6 @@
 </head>
 <body>
 
-
 <div class="bg-pattern bg-light repeat-img"
                 style="background-image: url(assets/images/blog-pattern-bg.png);">
                 <section class="blog-sec section" id="blog">
@@ -36,76 +35,76 @@
         <div class="contenedor-items">
             <div class="item">
                 <span class="titulo-item">The Original</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b1.png" alt="" class="img-item">
                 <span class="precio-item">$2.400</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Route 66</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b2.1.png" alt="" class="img-item">
                 <span class="precio-item">$3.200</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">T. Spicy Houston</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b3.png" alt="" class="img-item">
                 <span class="precio-item">$4.200</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Smoke House</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b4.png" alt="" class="img-item">
                 <span class="precio-item">$4.500</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Grilled Chicken B.</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b5.png" alt="" class="img-item">
                 <span class="precio-item">$4.200</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">#12 Hamburger</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b6.png" alt="" class="img-item">
                 <span class="precio-item">$4.200</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">American Fries</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b7.png" alt="" class="img-item">
                 <span class="precio-item">$1.250</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Bacon C. Fries</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b8.png" alt="" class="img-item">
                 <span class="precio-item">$1.675</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Onion Rings</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b9.png" alt="" class="img-item">
                 <span class="precio-item">$2.100</span>
                 <button class="boton-item">Agregar al Carrito</button>
 
         </div>
         <div class="item">
                 <span class="titulo-item">Chicken Bites</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b10.png" alt="" class="img-item">
                 <span class="precio-item">$2.800</span>
                 <button class="boton-item">Agregar al Carrito</button>
 
         </div>
         <div class="item">
                 <span class="titulo-item">Gaseosa</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b11.png" alt="" class="img-item">
                 <span class="precio-item">$1.400</span>
                 <button class="boton-item">Agregar al Carrito</button>
 
         </div>
         <div class="item">
                 <span class="titulo-item">Floats</span>
-                <img src="assets/images/dish/b2.png" alt="" class="img-item">
+                <img src="assets/images/dish/b12.png" alt="" class="img-item">
                 <span class="precio-item">$2.200</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
@@ -124,7 +123,7 @@
                 <div class="fila">
                     <strong>Tu Total</strong>
                     <span class="carrito-precio-total">
-                        $120.000,00
+                        
                     </span>
                 </div>
                 <button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i> </button>
