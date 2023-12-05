@@ -1,62 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Pagina no Encontrada</title>
+  <title>Página no Encontrada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
     body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('assets/images/404.jpg');
+      background-size: contain; /* Ajuste para mostrar toda la imagen sin recortarla */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+      background-position: center;
+      font-family: Arial, sans-serif;
     }
 
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
+
+    .back-btn {
+      position: absolute; /* Posicionamos el botón de manera absoluta */
+      top: 20px; /* Distancia del botón desde la parte superior */
+      left: 20px; /* Distancia del botón desde la parte izquierda */
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #ffcccc; /* Color de fondo rojo claro */
+      color: #000; /* Color del texto del botón (negro) */
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
+    .back-btn:hover {
+      background-color: #ffa5a5; /* Cambio de color al pasar el ratón */
     }
   </style>
 </head>
 
 <body>
-  <h1>Error,no se encontro el resultado solicitado</h1>
-  <p>Lo sineto, el recurso buscado no existe.</p>
+  <a href="login.html" class="back-btn">Regresar al inicio</a>
 </body>
 
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
+
