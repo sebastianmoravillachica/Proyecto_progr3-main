@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Redirigir al usuario a la página correspondiente después del inicio de sesión
             if ($id_cargo == 1) {
                 // Redirigir al usuario administrador a la parte específica de la página web para administradores
-                header('Location: dashboard.html');
+                header('Location: admin/index.php');
             } else if ($id_cargo == 2) {
                 // Redirigir al usuario cliente a la página principal después del inicio de sesión exitoso
                 header('Location: index.html');
