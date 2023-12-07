@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
        if (allFieldsFilled) {
           // Si todos los campos están llenos, muestra el mensaje de agradecimiento y redirige al index
           alert("Gracias por su compra");
-          window.location.href = "index.html"; // Reemplaza "index.html" con la ruta de tu página principal
+          window.location.href = "index.html"; 
        } else {
-          // Si falta algún campo, puedes mostrar un mensaje de error o realizar otra acción
           alert("Por favor, complete todos los campos antes de ordenar");
        }
     });

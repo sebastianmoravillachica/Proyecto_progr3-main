@@ -56,7 +56,7 @@
                                     <i class="uil uil-user"></i>
                                 </button>
                             </form>
-                            <a href="javascript:void(0)" class="header-btn header-cart">
+                            <a href="pedidos.php" class="header-btn header-cart">
                                 <i class="uil uil-shopping-bag"></i>
                             </a>
                             <a href="perfil.php" class="header-btn">
