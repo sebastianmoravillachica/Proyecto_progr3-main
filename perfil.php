@@ -1,5 +1,4 @@
-
-    <link rel="stylesheet" href="assets/css/perfil.css">
+<link rel="stylesheet" href="assets/css/perfil.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -13,11 +12,9 @@
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
                         <a class="list-group-item list-group-item-action active" data-toggle="list"
-                            href="#account-general">Perfil</a>
+                            href="#account-general"  onclick="activeTab = 'account-general'">Perfil</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-change-password">Cambiar contraseña </a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-info">Método de pago</a>
+                            href="#account-change-password"  onclick="activeTab = 'account-change-password'" >Cambiar contraseña </a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -37,74 +34,37 @@
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
-                                <div class="form-group">
+                                <div class="form-group" id= "actualizarDatosForm">
                                     <label class="form-label">Nombre</label>
-                                    <input type="text" class="form-control mb-1" value="">
+                                    <input type="text" class="form-control mb-1" value="" id="editNombre">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Apellidos</label>
-                                    <input type="text" class="form-control" value="">
+                                    <label class="form-label">Primer Apellido</label>
+                                    <input type="text" class="form-control" value="" id="editPrimerApellido">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Segundo Apellido</label>
+                                    <input type="text" class="form-control" value="" id="editSegundoApellido">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control mb-1" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Número de teléfono</label>
-                                    <input type="text" class="form-control" value="">
+                                    <input type="text" class="form-control mb-1" value="" id="editEmail">
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="account-change-password">
+                        <div class="tab-pane fade " id="account-change-password" >
                             <div class="card-body pb-2">
                                 <div class="form-group">
-                                    <label class="form-label">Contraseña actual</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="form-group">
                                     <label class="form-label">Nueva contraseña</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" id="editPass"class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Repetir nueva contraseña</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" id="editConfirmPass" class="form-control">
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="account-info">
-                            <div class="card-body pb-2">
-                                <div class="form-group">
-                                    <label class="form-label">Número de tarjeta</label>
-                                    <textarea class="form-control"
-                                        rows="1"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Código de seguridad</label>
-                                    <input type="text" class="form-control" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Tipo de tarjeta</label>
-                                    <select class="custom-select">
-                                        <option>Visa</option>
-                                        <option selected>MasterCard</option>
-                                        <option>American Express</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Dirección de facturación</h6>
-                                <div class="form-group">
-                                    <label class="form-label">Calle</label>
-                                    <input type="text" class="form-control" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Código Postal</label>
-                                    <input type="text" class="form-control" value>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -117,38 +77,43 @@
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
    <script type="text/javascript">
-      document.getElementById('backButton').addEventListener('click', function() {
-         window.location.href = 'index.html'; 
-      });
+   var activeTab = 'account-general';
 
-      document.getElementById('saveChangesButton').addEventListener('click', function() {
-    // Obtener valores de los campos
-      /*
-      var nombre = document.getElementById('nombre').value;
-      var apellidos = document.getElementById('apellidos').value;
-      var email = document.getElementById('email').value;
-      var telefono = document.getElementById('telefono').value;
+document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'index.html'; 
+});
 
-      $.ajax({
-         type: 'POST',
-         url: 'actualizar_perfil.php', 
-         data: {
-            nombre: nombre,
-            apellidos: apellidos,
-            email: email,
-            telefono: telefono
-         },
-         success: function(response) {
-            // Manejar la respuesta
-            console.log(response);
-         }
-      });
-      */
-    });
+document.getElementById('saveChangesButton').addEventListener('click', function() {
+    if (activeTab === 'account-general') {
+        var datosActualizados = "nombre=" + $('#editNombre').val() + "&apellido_1=" + $('#editPrimerApellido').val() + "&apellido_2=" + $('#editSegundoApellido').val() + "&email=" + $('#editEmail').val() +  "&id=1";
+
+        $.ajax({
+            type: 'put',
+            url: `apirest/src/public//updusuario?${datosActualizados}`, 
+            success: function(response) {
+                // Manejar la respuesta
+                console.log(response);
+            }
+        });
+    } else {
+        if ($('#editPass').val() === $('#editConfirmPass').val()) {
+            var contraseña = $('#editPass').val();
+
+            $.ajax({
+                type: 'put',
+                url: `apirest/src/public//updusuario?id=1&password=${contraseña}`, 
+                success: function(response) {
+                    // Manejar la respuesta
+                    console.log(response);
+                }
+            }); 
+        } else {
+            alert("Las contraseñas no coinciden");
+        }
+    }
+});
+
 </script>
 </body>
 </html>

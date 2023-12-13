@@ -36,18 +36,47 @@ function ready(){
 }
 function pagarClicked() {
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
-    while (carritoItems.hasChildNodes()){
+
+    // Obtener la información de los productos en el carrito
+    var itemsEnCarrito = [];
+    var carritoItemsElements = carritoItems.getElementsByClassName('carrito-item');
+    var totalCarrito = 0; // Inicializar el total
+
+    for (var i = 0; i < carritoItemsElements.length; i++) {
+        var item = carritoItemsElements[i];
+        var nombre = item.getElementsByClassName('carrito-item-titulo')[0].innerText;
+        var cantidad = item.getElementsByClassName('carrito-item-cantidad')[0].value;
+        var precio = item.getElementsByClassName('carrito-item-precio')[0].innerText;
+
+        // Calcular el subtotal por cada artículo
+        var subtotal = parseFloat(precio.replace('$', '').replace('.', '')) * cantidad;
+        totalCarrito += subtotal; // Sumar al total
+
+        itemsEnCarrito.push({
+            nombre: nombre,
+            cantidad: cantidad,
+            precio: precio,
+            subtotal: subtotal // Añadir el subtotal
+        });
+    }
+
+    // Guardar la información en el almacenamiento local
+    localStorage.setItem('historialPedidos', JSON.stringify({ items: itemsEnCarrito, total: totalCarrito }));
+
+    // Limpiar el carrito
+    while (carritoItems.hasChildNodes()) {
         carritoItems.removeChild(carritoItems.firstChild);
     }
 
     actualizarTotalCarrito();
-
     ocultarCarrito();
 
-    setTimeout(function() {
+    // Redirigir a la página de historial de pedidos
+    setTimeout(function () {
         window.location.href = "compra.php";
-    }, 200); // 200 milisegundos de espera 
+    }, 200);
 }
+
 
 function agregarAlCarritoClicked(event){
     var button = event.target;

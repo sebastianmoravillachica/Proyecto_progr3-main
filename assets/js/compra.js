@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
        if (allFieldsFilled) {
           // Si todos los campos están llenos, muestra el mensaje de agradecimiento y redirige al index
           alert("Gracias por su compra");
-          window.location.href = "index.html"; 
+          window.location.href = "pedidos.php"; 
        } else {
           alert("Por favor, complete todos los campos antes de ordenar");
        }
